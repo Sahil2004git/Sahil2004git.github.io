@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sahil Rahman - Professional Services Portfolio: Video Editing, Personal Training, Web Development, Social Media Management & Tourist Guidance">
+    <meta name="author" content="Sahil Rahman">
+    <meta name="keywords" content="video editing, personal training, web development, social media management, tourist guide, freelancer, Guwahati">
+    <title>Sahil Rahman - Professional Services Portfolio</title>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="services-style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <a href="#home" class="brand" aria-label="Home">
+                        <!-- Inline SVG Logo: SR monogram -->
+                        <svg class="brand-logo" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sahil Rahman logo">
+                            <defs>
+                                <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#dc2626"/>
+                                    <stop offset="100%" stop-color="#ef4444"/>
+                                </linearGradient>
+                                <filter id="brandShadow" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="rgba(0,0,0,0.2)"/>
+                                </filter>
+                            </defs>
+                            <circle cx="18" cy="18" r="16" fill="url(#brandGrad)" filter="url(#brandShadow)"/>
+                            <text x="18" y="22" text-anchor="middle" font-family="Segoe UI, system-ui, -apple-system, sans-serif" font-weight="700" font-size="14" fill="#ffffff">SR</text>
+                        </svg>
+                    </a>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon" id="theme-icon"></i>
+                        </button>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header" id="home">
+        <div class="container">
+            <div class="profile-content">
+                <div class="profile-info">
+                    <h1 class="name">Sahil Rahman</h1>
+                    <p class="tagline">Multi-Service Professional</p>
+                    <p class="subtitle">Video Editor • Personal Trainer • Web Developer • Social Media Manager • Tourist Guide</p>
+                </div>
+                <div class="profile-image">
+                    <img src="profile.jpg" alt="Sahil Rahman's Profile Picture" class="profile-pic">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Professional Overview Section -->
+        <section class="professional-overview" id="professional-overview">
+            <div class="container">
+                <h2 class="section-title">Professional Overview</h2>
+                <div class="overview-content">
+                    <div class="overview-card">
+                        <div class="overview-intro">
+                            <p class="overview-description">
+                                I'm Sahil Rahman, a multi-disciplinary professional with over 3+ years of experience delivering 
+                                high-quality services across creative, technical, and fitness domains. Based in Guwahati, Assam, 
+                                I specialize in transforming ideas into reality through innovative solutions and personalized approaches.
+                            </p>
+                        </div>
+                        
+                        <div class="overview-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-award highlight-icon"></i>
+                                <div class="highlight-content">
+                                    <h4>Excellence-Driven</h4>
+                                    <p>Committed to delivering exceptional results that exceed client expectations</p>
+                                </div>
+                            </div>
+                            
+                            <div class="highlight-item">
+                                <i class="fas fa-lightbulb highlight-icon"></i>
+                                <div class="highlight-content">
+                                    <h4>Innovation-Focused</h4>
+                                    <p>Leveraging cutting-edge technologies and creative approaches</p>
+                                </div>
+                            </div>
+                            
+                            <div class="highlight-item">
+                                <i class="fas fa-users highlight-icon"></i>
+                                <div class="highlight-content">
+                                    <h4>Client-Centric</h4>
+                                    <p>Building lasting relationships through personalized service delivery</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <h2 class="section-title">My Services</h2>
+                <div class="services-grid">
+                    <!-- Video Editing Service -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <div class="service-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Video Editing</h3>
+                            <p class="service-description">
+                                I create and edit professional-quality videos for YouTube, Instagram, promotions, and personal projects. 
+                                I handle cutting, transitions, color grading, sound effects, and subtitles to make your content stand out.
+                            </p>
+                            <div class="service-tech-stack">
+                                <span class="tech-tag">Premiere Pro</span>
+                                <span class="tech-tag">After Effects</span>
+                                <span class="tech-tag">DaVinci</span>
+                                <span class="tech-tag">YouTube</span>
+                            </div>
+                            <div class="service-buttons">
+                                <a href="mailto:sahilrahman5555@gmail.com?subject=Video Editing Service Inquiry" class="btn btn-primary">
+                                    <i class="fas fa-envelope"></i> Email Me
+                                </a>
+                                <a href="https://wa.me/916002591859?text=Hi, I'm interested in your Video Editing services" class="btn btn-whatsapp" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personal Training Service -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <div class="service-icon">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Personal Training</h3>
+                            <p class="service-description">
+                                I provide customized gym and fitness training programs, whether your goal is weight loss, muscle gain, or overall health. 
+                                I design workout routines, track progress, and guide you with proper techniques to avoid injuries.
+                            </p>
+                            <div class="service-tech-stack">
+                                <span class="tech-tag">Fitness Plans</span>
+                                <span class="tech-tag">Nutrition</span>
+                                <span class="tech-tag">Progress Tracking</span>
+                                <span class="tech-tag">Form Coaching</span>
+                            </div>
+                            <div class="service-buttons">
+                                <a href="mailto:sahilrahman5555@gmail.com?subject=Personal Training Service Inquiry" class="btn btn-primary">
+                                    <i class="fas fa-envelope"></i> Email Me
+                                </a>
+                                <a href="https://wa.me/916002591859?text=Hi, I'm interested in your Personal Training services" class="btn btn-whatsapp" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web Development Service -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <div class="service-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Web Application Development</h3>
+                            <p class="service-description">
+                                I design and build modern, responsive websites and web applications using HTML, CSS, JavaScript, and frameworks. 
+                                From personal portfolios to business websites, I deliver fast and user-friendly solutions.
+                            </p>
+                            <div class="service-tech-stack">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">FastAPI</span>
+                            </div>
+                            <div class="service-buttons">
+                                <a href="mailto:sahilrahman5555@gmail.com?subject=Web Development Service Inquiry" class="btn btn-primary">
+                                    <i class="fas fa-envelope"></i> Email Me
+                                </a>
+                                <a href="https://wa.me/916002591859?text=Hi, I'm interested in your Web Development services" class="btn btn-whatsapp" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Management Service -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <div class="service-icon">
+                                <i class="fas fa-hashtag"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Social Media Handling</h3>
+                            <p class="service-description">
+                                I manage and grow social media accounts by creating engaging posts, reels, and stories. 
+                                I schedule content, increase reach with trends, and build an audience matching your brand's goals.
+                            </p>
+                            <div class="service-tech-stack">
+                                <span class="tech-tag">Instagram</span>
+                                <span class="tech-tag">Content Creation</span>
+                                <span class="tech-tag">Analytics</span>
+                                <span class="tech-tag">Engagement</span>
+                            </div>
+                            <div class="service-buttons">
+                                <a href="mailto:sahilrahman5555@gmail.com?subject=Social Media Management Service Inquiry" class="btn btn-primary">
+                                    <i class="fas fa-envelope"></i> Email Me
+                                </a>
+                                <a href="https://wa.me/916002591859?text=Hi, I'm interested in your Social Media Management services" class="btn btn-whatsapp" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tourist Guidance Service -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <div class="service-icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Tourist Guidance</h3>
+                            <p class="service-description">
+                                I guide tourists with local insights, helping them explore attractions, find hidden gems, and enjoy authentic culture. 
+                                I ensure safe, comfortable, and memorable travel experiences in Northeast India.
+                            </p>
+                            <div class="service-tech-stack">
+                                <span class="tech-tag">Local Expertise</span>
+                                <span class="tech-tag">Cultural Tours</span>
+                                <span class="tech-tag">Travel Planning</span>
+                                <span class="tech-tag">Safety First</span>
+                            </div>
+                            <div class="service-buttons">
+                                <a href="mailto:sahilrahman5555@gmail.com?subject=Tourist Guidance Service Inquiry" class="btn btn-primary">
+                                    <i class="fas fa-envelope"></i> Email Me
+                                </a>
+                                <a href="https://wa.me/916002591859?text=Hi, I'm interested in your Tourist Guidance services" class="btn btn-whatsapp" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <div class="education-highlight">
+                                <div class="education-item">
+                                    <i class="fas fa-graduation-cap education-icon"></i>
+                                    <div class="education-content">
+                                        <h4>BCA in AI & Machine Learning</h4>
+                                        <p>Assam Downtown University (AdtU)</p>
+                                        <span class="education-focus">Specialized in Artificial Intelligence, Machine Learning, Data Science & Modern Web Technologies</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="about-intro">
+                                <h3 class="about-subtitle">Background & Education</h3>
+                                <p class="about-description">
+                                    I am a dedicated professional with a strong academic foundation in technology and artificial intelligence. 
+                                    I hold a <strong>Bachelor of Computer Applications (BCA)</strong> with specialization in 
+                                    <strong>Artificial Intelligence and Machine Learning</strong> from <strong>Assam Downtown University (AdtU)</strong>.
+                                </p>
+                                <p class="about-description">
+                                    This comprehensive education has equipped me with cutting-edge knowledge in AI/ML algorithms, data science, 
+                                    and modern programming practices, which I seamlessly integrate into my diverse service offerings. 
+                                    My technical expertise combined with creative passion allows me to deliver innovative solutions 
+                                    across video production, web development, fitness coaching, and digital marketing.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="about-stats">
+                            <h3 class="about-subtitle">Professional Impact</h3>
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <div class="stat-number">50+</div>
+                                    <div class="stat-label">Projects Completed</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">30+</div>
+                                    <div class="stat-label">Satisfied Clients</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">3+</div>
+                                    <div class="stat-label">Years Experience</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">5</div>
+                                    <div class="stat-label">Service Categories</div>
+                                </div>
+                            </div>
+                            
+                            <div class="professional-values">
+                                <h4 class="values-title">My Approach</h4>
+                                <div class="values-list">
+                                    <div class="value-item">
+                                        <i class="fas fa-star value-icon"></i>
+                                        <span>Quality-focused delivery</span>
+                                    </div>
+                                    <div class="value-item">
+                                        <i class="fas fa-clock value-icon"></i>
+                                        <span>Timely project completion</span>
+                                    </div>
+                                    <div class="value-item">
+                                        <i class="fas fa-handshake value-icon"></i>
+                                        <span>Client-centric solutions</span>
+                                    </div>
+                                    <div class="value-item">
+                                        <i class="fas fa-chart-line value-icon"></i>
+                                        <span>Results-driven outcomes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Let's Connect Section -->
+        <section class="lets-connect" id="lets-connect">
+            <div class="container">
+                <div class="connect-content">
+                    <div class="connect-header">
+                        <h2 class="connect-title">Let's Create Something Amazing Together</h2>
+                        <p class="connect-subtitle">Ready to transform your ideas into reality? I'm here to help you succeed.</p>
+                    </div>
+                    
+                    <div class="connect-grid">
+                        <div class="connect-card">
+                            <div class="connect-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h3 class="connect-card-title">Start Your Project</h3>
+                            <p class="connect-card-description">
+                                From concept to completion, let's bring your vision to life with professional expertise and creative innovation.
+                            </p>
+                            <div class="connect-action">
+                                <a href="#contact" class="connect-btn">
+                                    <span>Let's Discuss</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="connect-card">
+                            <div class="connect-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h3 class="connect-card-title">Free Consultation</h3>
+                            <p class="connect-card-description">
+                                Get expert advice and insights tailored to your specific needs. No commitment required - just valuable guidance.
+                            </p>
+                            <div class="connect-action">
+                                <a href="https://wa.me/916002591859?text=Hi Sahil! I'd like to schedule a free consultation" class="connect-btn whatsapp-connect" target="_blank">
+                                    <span>Chat Now</span>
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="connect-card">
+                            <div class="connect-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3 class="connect-card-title">Premium Quality</h3>
+                            <p class="connect-card-description">
+                                Experience excellence in every project with attention to detail, timely delivery, and results that exceed expectations.
+                            </p>
+                            <div class="connect-action">
+                                <a href="mailto:sahilrahman5555@gmail.com?subject=Premium Service Inquiry" class="connect-btn email-connect">
+                                    <span>Get Quote</span>
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="connect-footer">
+                        <div class="connect-stats">
+                            <div class="connect-stat">
+                                <div class="stat-value">24h</div>
+                                <div class="stat-desc">Response Time</div>
+                            </div>
+                            <div class="connect-stat">
+                                <div class="stat-value">100%</div>
+                                <div class="stat-desc">Client Satisfaction</div>
+                            </div>
+                            <div class="connect-stat">
+                                <div class="stat-value">50+</div>
+                                <div class="stat-desc">Projects Delivered</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <p class="contact-description">
+                            Ready to work together? I'm always excited to take on new projects and help bring your ideas to life. 
+                            Whether you need video editing, fitness coaching, web development, social media growth, or local guidance, 
+                            let's discuss how I can help you achieve your goals.
+                        </p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:sahilrahman5555@gmail.com">sahilrahman5555@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+916002591859">+91 6002591859</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Guwahati, Assam, India</span>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/sahilrahman2004/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/Sahil2004git" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.instagram.com/thesahil_28?igsh=MXZ2dWh6Znh1djgwaA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://youtube.com/@thesr28.04?si=ennFg7eBaXPhUFNK" target="_blank" rel="noopener noreferrer" class="social-link" title="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="mailto:sahilrahman5555@gmail.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Sahil Rahman. All rights reserved.</p>
+                <p>Hosted on Vercel</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/916002591859?text=Hi Sahil! I'm interested in your services" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript for Mobile Navigation, Dark Mode, and Animations -->
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Dark Mode Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('services-theme') || 'light';
+        body.setAttribute('data-theme', currentTheme);
+        
+        // Update icon based on current theme
+        function updateThemeIcon(theme) {
+            if (theme === 'dark') {
+                themeIcon.className = 'fas fa-sun';
+            } else {
+                themeIcon.className = 'fas fa-moon';
+            }
+        }
+
+        // Initialize icon
+        updateThemeIcon(currentTheme);
+
+        // Theme toggle event listener
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            // Add animation class
+            themeToggle.classList.add('animating');
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('services-theme', newTheme);
+            updateThemeIcon(newTheme);
+            
+            // Remove animation class after animation completes
+            setTimeout(() => {
+                themeToggle.classList.remove('animating');
+            }, 600);
+        });
+
+        // Scroll Animations
+        // Tune for fast scrolling: trigger earlier above/below viewport
+        const observerOptions = {
+            threshold: 0,
+            // Preload well before entering viewport from top or bottom
+            rootMargin: '600px 0px 600px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                    if (el.classList.contains('project-card')) {
+                        el.classList.add('has-entered');
+                    }
+                    // Stop observing once revealed
+                    observer.unobserve(el);
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add initial state and fast transitions to elements
+            const animatedElements = document.querySelectorAll('.service-card, .project-card, .section-title, .about-content, .contact-content');
+            animatedElements.forEach((el) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(16px)';
+                el.style.willChange = 'transform, opacity';
+                el.style.transition = el.classList.contains('project-card')
+                    ? 'transform 0.24s ease, opacity 0.24s ease'
+                    : 'transform 0.28s ease, opacity 0.28s ease';
+                observer.observe(el);
+            });
+
+            // Immediate reveal for elements already in or near view
+            const revealBuffer = 500; // px
+            const fastReveal = () => {
+                document.querySelectorAll('.service-card, .project-card, .section-title, .about-content, .contact-content')
+                    .forEach(el => {
+                        if (el.style.opacity === '1') return;
+                        const rect = el.getBoundingClientRect();
+                        if (rect.top < (window.innerHeight + revealBuffer) && rect.bottom > -revealBuffer) {
+                            el.style.opacity = '1';
+                            el.style.transform = 'translateY(0)';
+                            if (el.classList.contains('project-card')) {
+                                el.classList.add('has-entered');
+                            }
+                            observer.unobserve(el);
+                        }
+                    });
+            };
+
+            // Run once on DOM ready
+            requestAnimationFrame(fastReveal);
+
+            // Throttled reveal on scroll/resize for very fast scrolling
+            let ticking = false;
+            const onScrollOrResize = () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        fastReveal();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            };
+            window.addEventListener('scroll', onScrollOrResize, { passive: true });
+            window.addEventListener('resize', onScrollOrResize, { passive: true });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Enhanced navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            const scrolled = window.scrollY > 50;
+            
+            if (scrolled) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // Parallax effect for header
+            const header = document.querySelector('.header');
+            if (header) {
+                const scrolled = window.pageYOffset;
+                const parallax = scrolled * 0.5;
+                header.style.transform = `translateY(${parallax}px)`;
+            }
+        });
+
+        // Add loading animation
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '1';
+        });
+
+        // Initial page load animation
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease';
+    </script>
+</body>
+</html>
