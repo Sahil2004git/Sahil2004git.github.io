@@ -564,12 +564,14 @@
             }, 600);
         });
 
-        // Scroll Animations
-        // Tune for fast scrolling: trigger earlier above/below viewport
+        // Scroll Animations - Optimized for Mobile
+        // Detect mobile devices
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+        
         const observerOptions = {
             threshold: 0,
-            // Preload well before entering viewport from top or bottom
-            rootMargin: '600px 0px 600px 0px'
+            // Reduce margin on mobile for better performance
+            rootMargin: isMobile ? '200px 0px 200px 0px' : '600px 0px 600px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -589,20 +591,21 @@
 
         // Observe elements for animation
         document.addEventListener('DOMContentLoaded', () => {
+            // Reduce animation complexity on mobile
+            const transitionDuration = isMobile ? '0.15s' : '0.28s';
+            
             // Add initial state and fast transitions to elements
             const animatedElements = document.querySelectorAll('.service-card, .project-card, .section-title, .about-content, .contact-content');
             animatedElements.forEach((el) => {
                 el.style.opacity = '0';
-                el.style.transform = 'translateY(16px)';
+                el.style.transform = isMobile ? 'translateY(8px)' : 'translateY(16px)';
                 el.style.willChange = 'transform, opacity';
-                el.style.transition = el.classList.contains('project-card')
-                    ? 'transform 0.24s ease, opacity 0.24s ease'
-                    : 'transform 0.28s ease, opacity 0.28s ease';
+                el.style.transition = `transform ${transitionDuration} ease, opacity ${transitionDuration} ease`;
                 observer.observe(el);
             });
 
             // Immediate reveal for elements already in or near view
-            const revealBuffer = 500; // px
+            const revealBuffer = isMobile ? 200 : 500; // Smaller buffer on mobile
             const fastReveal = () => {
                 document.querySelectorAll('.service-card, .project-card, .section-title, .about-content, .contact-content')
                     .forEach(el => {
@@ -622,10 +625,15 @@
             // Run once on DOM ready
             requestAnimationFrame(fastReveal);
 
-            // Throttled reveal on scroll/resize for very fast scrolling
+            // Throttled reveal on scroll/resize - Less frequent on mobile
             let ticking = false;
+            const scrollThrottle = isMobile ? 100 : 16; // Slower on mobile
+            let lastScroll = 0;
+            
             const onScrollOrResize = () => {
-                if (!ticking) {
+                const now = Date.now();
+                if (now - lastScroll > scrollThrottle && !ticking) {
+                    lastScroll = now;
                     window.requestAnimationFrame(() => {
                         fastReveal();
                         ticking = false;
@@ -633,43 +641,70 @@
                     ticking = true;
                 }
             };
-            window.addEventListener('scroll', onScrollOrResize, { passive: true });
+            
+            // Only add scroll listeners if not mobile or reduced motion
+            if (!isMobile && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                window.addEventListener('scroll', onScrollOrResize, { passive: true });
+            }
             window.addEventListener('resize', onScrollOrResize, { passive: true });
         });
 
-        // Smooth scrolling for navigation links
+        // Smooth scrolling for navigation links - Optimized for mobile
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    // Use different scroll behavior for mobile
+                    if (isMobile) {
+                        target.scrollIntoView({
+                            behavior: 'auto', // Instant on mobile for better performance
+                            block: 'start'
+                        });
+                    } else {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
                 }
             });
         });
 
-        // Enhanced navbar scroll effect
+        // Enhanced navbar scroll effect - Throttled for mobile
+        let navbarTicking = false;
+        let lastNavbarScroll = 0;
+        const navbarThrottle = isMobile ? 100 : 16;
+        
         window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            const scrolled = window.scrollY > 50;
-            
-            if (scrolled) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+            const now = Date.now();
+            if (now - lastNavbarScroll > navbarThrottle && !navbarTicking) {
+                lastNavbarScroll = now;
+                window.requestAnimationFrame(() => {
+                    const navbar = document.getElementById('navbar');
+                    const scrolled = window.scrollY > 50;
+                    
+                    if (scrolled) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
 
-            // Parallax effect for header
-            const header = document.querySelector('.header');
-            if (header) {
-                const scrolled = window.pageYOffset;
-                const parallax = scrolled * 0.5;
-                header.style.transform = `translateY(${parallax}px)`;
+                    // Disable parallax on mobile for better performance
+                    if (!isMobile) {
+                        const header = document.querySelector('.header');
+                        if (header) {
+                            const scrolled = window.pageYOffset;
+                            const parallax = scrolled * 0.5;
+                            header.style.transform = `translateY(${parallax}px)`;
+                        }
+                    }
+                    
+                    navbarTicking = false;
+                });
+                navbarTicking = true;
             }
-        });
+        }, { passive: true });
 
         // Add loading animation
         window.addEventListener('load', () => {
