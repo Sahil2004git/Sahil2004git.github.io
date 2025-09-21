@@ -53,6 +53,142 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Mobile Performance Optimizations */
+@media (max-width: 768px) {
+    * {
+        /* Hardware acceleration for better mobile performance */
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-perspective: 1000;
+        perspective: 1000;
+        will-change: auto;
+    }
+    
+    /* Disable smooth scrolling on mobile for better performance */
+    html {
+        scroll-behavior: auto;
+    }
+    
+    /* Simplify animations on mobile */
+    .service-card, .contact-item, .social-link, .project-card {
+        transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+        will-change: transform, opacity;
+    }
+    
+    /* Reduce animation complexity */
+    .service-card::before, .service-card::after {
+        display: none !important;
+    }
+    
+    /* Disable hover effects on mobile */
+    .service-card:hover::before,
+    .service-card:hover::after {
+        display: none !important;
+    }
+    
+    /* Simplify icon animations */
+    .service-icon::before, .service-icon::after {
+        display: none !important;
+    }
+    
+    /* Reduce complex shadows and effects */
+    .service-card, .contact-item, .social-link {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+    
+    /* Disable parallax transforms on mobile */
+    .header {
+        transform: none !important;
+    }
+    
+    /* Disable complex gradients on mobile */
+    .service-image::before,
+    .service-image::after {
+        display: none !important;
+    }
+    
+    /* Simplify gradients on mobile */
+    body::before {
+        display: none !important;
+    }
+    
+    /* Reduce floating animations */
+    .profile-pic {
+        animation: none !important;
+    }
+    
+    /* Disable complex background animations on mobile */
+    .about::before,
+    .about::after,
+    .services::before,
+    .services::after,
+    .projects::before,
+    .projects::after {
+        display: none !important;
+    }
+    
+    /* Disable 3D transforms on mobile */
+    .project-card:hover {
+        transform: translateY(-8px) scale(1.02) !important;
+    }
+    
+    /* Simplify contact section on mobile */
+    .contact::before,
+    .contact::after {
+        display: none !important;
+    }
+    
+    /* Optimize floating animations */
+    .whatsapp-float {
+        animation: none !important;
+    }
+    
+    /* Reduce motion complexity */
+    @keyframes floatProject {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-3px); }
+    }
+    
+    /* Disable orbit animations on mobile */
+    .service-icon::after {
+        animation: none !important;
+    }
+    
+    /* Faster transitions */
+    .theme-toggle {
+        transition: all 0.1s ease !important;
+    }
+    
+    /* Optimize contact section red theming for mobile */
+    .contact-item {
+        will-change: transform, box-shadow;
+        transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+    }
+    
+    .contact-item i {
+        animation: none !important;
+        will-change: auto;
+    }
+    
+    .social-link {
+        will-change: transform, background-color;
+        transition: all 0.15s ease !important;
+    }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 /* Animation Keyframes */
 @keyframes fadeInUp {
     from {
